@@ -1,0 +1,33 @@
+application: jsncpr-com
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /
+  static_files: jsncpr.html
+  upload: jsncpr\.html
+
+- url: /downloads
+  static_dir: downloads
+
+- url: /images
+  static_dir: images
+
+- url: /javascripts
+  static_dir: javascripts
+
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
