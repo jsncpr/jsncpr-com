@@ -13,17 +13,8 @@ handlers:
   static_files: jsncpr.html
   upload: jsncpr\.html
 
-- url: /downloads
-  static_dir: downloads
-
-- url: /images
-  static_dir: images
-
-- url: /javascripts
-  static_dir: javascripts
-
-- url: /stylesheets
-  static_dir: stylesheets
+- url: /static
+  static_dir: static
 
 - url: .*
   script: main.app
